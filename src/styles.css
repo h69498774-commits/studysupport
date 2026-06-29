@@ -1,0 +1,437 @@
+:root {
+  color: #1f2933;
+  background: #f5f7f8;
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  min-height: 42px;
+  border: 0;
+  border-radius: 6px;
+  padding: 0.62rem 0.9rem;
+  background: #256b74;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #f2bf5e;
+  outline-offset: 2px;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #c7d1d5;
+  border-radius: 6px;
+  padding: 0.62rem 0.75rem;
+  background: #ffffff;
+  color: #1f2933;
+}
+
+h1,
+h2,
+h3,
+p,
+dl {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.55rem;
+}
+
+h3 {
+  font-size: 1.08rem;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 40px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.app-header nav,
+.button-row,
+.bulk-actions,
+.status-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.eyebrow {
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.page-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.toolbar,
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.toolbar p,
+.section-heading p,
+.item-card p,
+.field-panel p {
+  color: #5f6c72;
+}
+
+.panel,
+.item-card,
+.storage-note {
+  background: #ffffff;
+  border: 1px solid #dce3e5;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px rgba(24, 48, 58, 0.06);
+}
+
+.panel {
+  padding: 18px;
+}
+
+.item-card {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.field-list {
+  display: grid;
+  gap: 14px;
+}
+
+.inline-form {
+  display: grid;
+  grid-template-columns: minmax(90px, max-content) minmax(180px, 1fr) max-content;
+  gap: 10px;
+  align-items: end;
+}
+
+.inline-form label,
+.file-input,
+.select-label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+}
+
+.ghost-button,
+.secondary-button {
+  background: #e7eff1;
+  color: #24545d;
+}
+
+.text-button {
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+  color: #256b74;
+}
+
+.danger-button {
+  background: #b63737;
+}
+
+.danger-soft {
+  background: #8f2f2f;
+}
+
+.icon-button {
+  min-width: 38px;
+  padding: 0.35rem 0.65rem;
+  background: transparent;
+  color: inherit;
+}
+
+.notice {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.notice.success {
+  background: #e9f6ef;
+  color: #1e613c;
+  border: 1px solid #a7d8ba;
+}
+
+.notice.error {
+  background: #fff0ef;
+  color: #9b2c2c;
+  border: 1px solid #f1b8b2;
+}
+
+.notice.info {
+  background: #eef5fb;
+  color: #28577a;
+  border: 1px solid #b7d4ea;
+}
+
+.empty-state {
+  color: #5f6c72;
+  text-align: center;
+  padding: 22px;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.stat-grid div {
+  border: 1px solid #e2e8ea;
+  border-radius: 6px;
+  padding: 10px;
+  background: #fbfcfc;
+}
+
+.stat-grid dt {
+  color: #66737a;
+  font-size: 0.86rem;
+}
+
+.stat-grid dd {
+  margin: 2px 0 0;
+  font-size: 1.18rem;
+  font-weight: 800;
+}
+
+.chart-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.chart-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+
+.metric-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 8px;
+}
+
+.metric-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  border-bottom: 1px solid #e2e8ea;
+  padding: 8px 0;
+}
+
+.metric-list span {
+  overflow-wrap: anywhere;
+}
+
+.question-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.question-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 1fr) minmax(110px, max-content) minmax(260px, 2fr);
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #dce3e5;
+  border-left: 6px solid #8b96a0;
+  border-radius: 8px;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.question-row.correct {
+  border-left-color: #2f855a;
+}
+
+.question-row.incorrect {
+  border-left-color: #c2413d;
+}
+
+.question-row.unanswered {
+  border-left-color: #6b7280;
+}
+
+.check-label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 800;
+}
+
+.check-label input {
+  width: 20px;
+  min-height: 20px;
+}
+
+.status-badge {
+  font-weight: 800;
+}
+
+.status-buttons button {
+  flex: 1 1 110px;
+}
+
+.status-buttons .active {
+  background: #2f855a;
+}
+
+.status-buttons .neutral {
+  background: #5f6c72;
+}
+
+.bulk-actions {
+  margin-top: 14px;
+}
+
+.pagination-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid #e2e8ea;
+  border-radius: 8px;
+  background: #fbfcfc;
+  text-align: center;
+  font-weight: 800;
+}
+
+.pagination-bar span {
+  display: grid;
+  gap: 2px;
+  min-width: 190px;
+}
+
+.pagination-bar small {
+  color: #66737a;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.danger-zone {
+  border-color: #f1b8b2;
+}
+
+.storage-note {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 14px 16px;
+  color: #4b5960;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    width: min(100% - 20px, 1180px);
+    padding-top: 14px;
+  }
+
+  .app-header,
+  .toolbar,
+  .section-heading,
+  .storage-note {
+    display: grid;
+  }
+
+  .app-header nav,
+  .button-row,
+  .bulk-actions,
+  .pagination-bar {
+    width: 100%;
+  }
+
+  .app-header nav button,
+  .button-row button,
+  .bulk-actions button,
+  .pagination-bar button {
+    flex: 1 1 130px;
+  }
+
+  .pagination-bar {
+    flex-wrap: wrap;
+  }
+
+  .inline-form {
+    grid-template-columns: 1fr;
+  }
+
+  .question-row {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-wrap {
+    min-height: 260px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+}
